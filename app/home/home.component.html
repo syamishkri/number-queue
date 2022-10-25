@@ -1,0 +1,99 @@
+<a routerLink="/counter" routerLinkActive="active" ariaCurrentWhenActive="page">Counter Management</a>
+
+<br><br><br>
+
+<div style="background-color:#77DEFF; width:500px;height:130px;border:1px solid #77DEFF;margin:0% auto;">
+  <table width="100%">
+    <tr>
+      <td width="30%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><b>Now Serving : {{serving_num}}</b></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><b>Last Number: {{last_num}}</b></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <button (click)="generateNum()" style="width:150px;height:30px;background-color:rgb(30, 95, 176);border-color: rgb(30, 95, 176);color:white;margin:0% auto;display:block;">
+    <b>Take a Number</b>
+  </button>
+
+  <br>
+
+  <div align="center" *ngIf="new_num>0">
+    <h3>Your number is {{this.new_num}}</h3>
+  </div>
+  
+</div>
+
+<!-- Display counters -->
+<br><br><br><br>
+
+<table width="100%">
+  <tr>
+    <td align="center">
+
+      <!-- Counter 1 -->
+      <div style="width:150px;height:100px;border:1px solid #000;margin:0% auto;display: inline-block;">
+        <p>
+          <b>Counter 1</b>&nbsp;&nbsp;
+          <!-- {{this.counterOne}} -->
+          <span *ngIf="this.counterOne==4 || this.counterOne==2" style="height:10px;width:10px;background-color:rgb(53, 179, 19);border-radius:50%;display:inline-block;"></span>
+          <span *ngIf="this.counterOne==1" style="height:10px;width:10px;background-color:grey;border-radius:50%;display:inline-block;"></span>
+          <span *ngIf="this.counterOne==3" style="height:10px;width:10px;background-color:red;border-radius:50%;display:inline-block;"></span>
+        </p>
+        <h2 *ngIf="this.counterOne==1">Offline</h2>
+        <h2 *ngIf="this.counterOne==2||this.counterOne==4">----</h2>
+        <h2 *ngIf="this.counterOne==3">{{this.numOne}}</h2>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <!-- Counter 2 -->
+      <div style="width:150px;height:100px;border:1px solid #000;margin:0% auto;display: inline-block;">
+        <p>
+          <b>Counter 2</b>&nbsp;&nbsp;
+          <!-- {{this.counterTwo}} -->
+          <span *ngIf="this.counterTwo==4 || this.counterTwo==2" style="height:10px;width:10px;background-color:rgb(53, 179, 19);border-radius:50%;display:inline-block;"></span>
+          <span *ngIf="this.counterTwo==1" style="height:10px;width:10px;background-color:grey;border-radius:50%;display:inline-block;"></span>
+          <span *ngIf="this.counterTwo==3" style="height:10px;width:10px;background-color:red;border-radius:50%;display:inline-block;"></span>
+        </p>
+        <h2 *ngIf="this.counterTwo==1">Offline</h2>
+        <h2 *ngIf="this.counterTwo==2||this.counterTwo==4">----</h2>
+        <h2 *ngIf="this.counterTwo==3">{{this.numTwo}}</h2>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <!-- Counter 3 -->
+      <div style="width:150px;height:100px;border:1px solid #000;margin:0% auto;display: inline-block;">
+        <p>
+          <b>Counter 3</b>&nbsp;&nbsp;
+          <!-- {{this.counterThree}} -->
+          <span *ngIf="this.counterThree==4||this.counterThree==2" style="height:10px;width:10px;background-color:rgb(53, 179, 19);border-radius:50%;display:inline-block;"></span>
+          <span *ngIf="this.counterThree==1" style="height:10px;width:10px;background-color:grey;border-radius:50%;display:inline-block;"></span>
+          <span *ngIf="this.counterThree==3" style="height:10px;width:10px;background-color:red;border-radius:50%;display:inline-block;"></span>
+        </p>
+        <h2 *ngIf="this.counterThree==1">Offline</h2>
+        <h2 *ngIf="this.counterThree==2||this.counterThree==4">----</h2>
+        <h2 *ngIf="this.counterThree==3">{{this.numThree}}</h2>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <!-- Counter 4 -->
+      <div style="width:150px;height:100px;border:1px solid #000;margin:0% auto;display: inline-block;">
+        <p>
+          <b>Counter 4</b>&nbsp;&nbsp;
+          <!-- {{this.counterFour}} -->
+          <span *ngIf="this.counterFour==4 || this.counterFour==2" style="height:10px;width:10px;background-color:rgb(53, 179, 19);border-radius:50%;display:inline-block;"></span>
+          <span *ngIf="this.counterFour==1" style="height:10px;width:10px;background-color:grey;border-radius:50%;display:inline-block;"></span>
+          <span *ngIf="this.counterFour==3" style="height:10px;width:10px;background-color:red;border-radius:50%;display:inline-block;"></span>
+        </p>
+        <h2 *ngIf="this.counterFour==1">Offline</h2>
+        <h2 *ngIf="this.counterFour==2||this.counterFour==4">----</h2>
+        <h2 *ngIf="this.counterFour==3">{{this.numFour}}</h2>
+      </div>
+
+    </td>
+  </tr>
+</table>
